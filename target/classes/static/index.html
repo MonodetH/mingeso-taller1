@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<!--
+	Linear by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Metodos de Ingenieria de Software</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+	</head>
+	<body ng-app="mainModule">
+
+	<!-- Header -->
+		<div id="header">
+			<div class="container"> 
+				
+				<!-- Logo -->
+				<div id="logo">
+					<h1><a href="#">Métodos de Ingeniería de Software</a></h1>
+					<span class="tag"></span>
+				</div>
+			</div>
+		</div>
+	<!-- Header --> 
+
+	<!-- Main -->
+		<div id="main">
+			<div id="content" class="container" ng-controller="StudentController"  ng-init="getStudents()" ng-show="students != null">
+				<div class="student-info-bottom" style="height:300px;overflow:auto;">
+					 <table style="width:100%">
+					 <tr>
+			 	 		<th><b>Nombre</b></th>
+					    	<th><b>Apellido</b></th>
+					    	<th><b>Rut</b></th>
+					     	<th><b>Carrera</b></th>
+					      	<th><b>Año Ingreso</b></th>
+					    	<th><b>Email</b></th>
+					  </tr>
+					  <tr ng-repeat="student in students">
+					    <td>{{student.first_name}}</td>
+					    <td>{{student.last_name}}</td>
+					    <td>{{student.rut}}</td>
+					    <td>{{student.career}}</td>
+					    <td>{{student.entry_year}}</td>
+					     <td>{{student.email}}</td>
+					  </tr>
+					</table> 
+				</div>
+			</div>
+		</div>
+	<!-- /Main -->
+
+	<!-- Tweet -->
+		<div id="tweet">
+			<div class="container">
+				<section>
+					
+				</section>
+			</div>
+		</div>
+	<!-- /Tweet -->
+
+	<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<section>
+					<header>
+						<h2>Añadir Alumnos</h2>
+					</header>
+
+					<div class="form" ng-controller="StudentController" >
+						<div class= "container123">
+						<label for="first_name"><font color="white">Nombre:</font></label>
+						<input id="first_name" ng-model="first_name" type="text" />
+						</div>
+						<div class= "container123">
+						<label for="last_name"><font color="white">Apellido:</font></label>
+						<input id="last_name" ng-model="last_name" type="text" />
+						</div>
+						<div class= "container123">
+						<label for="rut"><font color="white">Rut:     </font></label>
+						<input id="rut" ng-model="rut" type="text" />
+						</div>
+						<div class= "container123">
+						<label for="email"><font color="white">Email:</font></label>
+						<input id="email" ng-model="email" type="text" />
+						</div>
+						<div class= "container123">
+						<label for="career"><font color="white">Carrera:</font></label>
+						<input id="career" ng-model="career" type="text" />
+						</div>
+						<div class= "container123">
+						<label for="entry_year"><font color="white">Año Ingreso:</font></label>
+						<input id="entry_year" ng-model="entry_year" type="number" />
+						</div>
+						<button  type="submit" class="btn btn-default" ng-click="addStudent()">Añadir Alumno</button>
+					</div>
+					
+				</section>
+			</div>
+		</div>
+	<!-- /Footer -->
+
+	<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+			</div>
+		</div>
+
+
+
+ 	
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+
+<!-- Angular js-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+
+<!-- Angular Bootstrap -->
+<script data-require="angular-bootstrap@0.12.0" data-semver="0.12.0" src="https://angular-ui.github.io/bootstrap/	ui-bootstrap-tpls-0.12.0.min.js"></script>
+
+<!-- Angular: app.js -->
+<script src="js/app.js"></script>
+
+<!-- Angular: Controladores -->
+<script src="js/StudentController.js"></script>
+
+	
+</body>
+</html>

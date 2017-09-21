@@ -1,4 +1,4 @@
-edu/usach/mingeso1/controllers/StudentController.class
 edu/usach/mingeso1/Mingeso1Application.class
 edu/usach/mingeso1/repository/StudentRepository.class
+edu/usach/mingeso1/controllers/StudentController.class
 edu/usach/mingeso1/models/Student.class
