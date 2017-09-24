@@ -4,6 +4,7 @@ import edu.usach.mingeso1.models.Student;
 import edu.usach.mingeso1.repository.StudentRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,8 +12,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path="/student")
 public class StudentController
 {
+	private final StudentRepository studentRepository;
+
 	@Autowired
-	private StudentRepository studentRepository;
+	public StudentController(StudentRepository studentRepository) {
+		this.studentRepository = studentRepository;
+	}
 
 	@GetMapping(path="/all")
     	public @ResponseBody Iterable<Student> getAllStudents()
@@ -23,7 +28,8 @@ public class StudentController
 	@GetMapping(path="/{id}")
     	public @ResponseBody Student getStudent(@PathVariable("id") Integer id)
     	{
-        		long lid = id.longValue();
+			System.out.println(studentRepository);
+			long lid = id.longValue();
         		return studentRepository.findOne(lid);
 	}
 

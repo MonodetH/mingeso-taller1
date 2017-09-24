@@ -31,6 +31,7 @@ public class Student
 	@NotNull
 	private int entry_year;
 
+	public long getId() {return student_id;}
 	public String getRut()
 	{
 		return rut;
